@@ -9,9 +9,8 @@ header.masthead {
 .carousel {
   .carousel-inner{
     .carousel-item {
-      img {
+      img, video {
         position: absolute;
-        height: 100%;
         width: 100%;
       }
       /* background-position: center;

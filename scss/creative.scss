@@ -1,6 +1,9 @@
 // Import custom variables (overrides Bootstrap default variables)
 @import "./variables.scss";
 
+//import Font
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400i|Roboto&display=swap");
+
 // Import Bootstrap
 @import "bootstrap/scss/bootstrap.scss";
 
@@ -9,5 +12,6 @@
 @import "./navbar.scss";
 @import "./masthead.scss";
 @import "./portfolio.scss";
-
-
+@import "./home";
+@import "./services.scss";
+@import "./_why-us.scss"

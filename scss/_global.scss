@@ -1,4 +1,8 @@
 // Global styling for this template
+body {
+  color: $primary;
+}
+
 body,
 html {
   width: 100%;
@@ -7,7 +11,7 @@ html {
 
 // Typography
 .text-white-75 {
-  color: fade-out($white, .25);
+  color: fade-out($white, 0.25);
 }
 
 // Custom horizontal rules

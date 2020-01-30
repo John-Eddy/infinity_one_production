@@ -1,8 +1,8 @@
-(function($) {
+(function ($) {
   "use strict"; // Start of use strict
 
   // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -26,44 +26,46 @@
   //   offset: 75
   // });
 
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-scrolled");
-    } else {
-      $("#mainNav").slideDown("slow");
-    }
-  };
 
   // Collapse now if page is not at top
-//  navbarCollapse();
+  //  navbarCollapse();
   // Collapse the navbar when page is scrolled
   //$(window).scroll(navbarCollapse);
 
+  // Collapse Navbar
+  // var navbarCollapse = function() {
+  //   if ($("#mainNav").offset().top > 100) {
+  //     $("#mainNav").addClass("navbar-scrolled");
+  //   } else {
+  //     $("#mainNav").slideDown("slow");
+  //   }
+  // };
 
-  let position = $(window).scrollTop(); 
+
+
+  var position = $(window).scrollTop();
   // should start at 0
 
   //Masque la navbar lors du scroll
-  $(window).scroll(function() {
-      const scroll      = $(window).scrollTop();//Position actuelle
-      const triggerTop  = 100; //Interval haut
-      const triggerDown = 30; // Interval bas
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();//Position actuelle
+    var triggerTop = 100; //Interval haut
+    var triggerDown = 30; // Interval bas
 
-       
-      if(scroll > (position + triggerDown)) {
+
+    if (scroll > (position + triggerDown)) {
       // Si scroll vers le bas
-          $("#mainNav").children().fadeOut( "fast", function() {
-            $("#mainNav").slideUp("fast");
-          });
-          position = scroll;
-      } else if (scroll < (position - triggerTop)) { 
-        //Scroll vers le haut
-          $("#mainNav").slideDown("fast", function() {
-            $("#mainNav").children().fadeIn("fast");
-          });
-          position = scroll;
-      } 
+      $("#mainNav").children().fadeOut("fast", function () {
+        $("#mainNav").slideUp("fast");
+      });
+      position = scroll;
+    } else if (scroll < (position - triggerTop)) {
+      //Scroll vers le haut
+      $("#mainNav").slideDown("fast", function () {
+        $("#mainNav").children().fadeIn("fast");
+      });
+      position = scroll;
+    }
   });
 
   // Magnific popup calls
