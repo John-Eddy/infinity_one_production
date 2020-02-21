@@ -3,38 +3,13 @@
   .container-fluid {
     h2 {
       text-transform: uppercase;
+
     }
-    .card-deck {
-      .card {
-        .card-body {
-          h5 {
-            font-size: 20px;
-            font-weight: 800;
-            margin-bottom: 10px;
-          }
-          h6 {
-            font-weight: 700;
-          }
-          h7 {
-            font-weight: 600;
-            font-size: 15px;
-          }
-          ul {
-            li {
-              margin-top: 5px;
-            }
-          }
-          ul.options {
-            font-size: 13px;
-            li {
-              width: 100%;
-              span {
-                float: right;
-              }
-            }
-          }
-        }
+    .options {
+      .text-muted {
+        font-size: 12px;
       }
     }
+   
   }
 }
