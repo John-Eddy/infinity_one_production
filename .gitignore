@@ -1,8 +1,7 @@
 node_modules
 bower_components
 help.txt
-css/*
+css
 js/*.min.js
 videos/*
-css/creative.css
-css/creative.min.css
+

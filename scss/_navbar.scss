@@ -4,7 +4,7 @@
   background-color: $black;
   transition: background-color 0.2s ease;
   position: fixed;
-  height: 72px;
+  height: $navbar-height;
 
   .navbar-brand {
     font-family: $font-family-sans-serif;
