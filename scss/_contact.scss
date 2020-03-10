@@ -1,6 +1,15 @@
-.container {
-    .info{
-        font-size: 20px;
-        
+#contact {
+    background-color: $dark;
+    color: $white;
+  .container {
+    .info {
+      font-size: 20px;
     }
+    form {
+        input,select,textarea {
+            background-color: $dark;
+            color: $white;
+        }
+    }
+  }
 }

@@ -1,23 +1,25 @@
 // Base styling for the navbar
 #mainNav {
   box-shadow: $box-shadow;
-  background-color: $black;
+  background-color: #21212152;
   transition: background-color 0.2s ease;
   position: fixed;
   height: $navbar-height;
 
   .navbar-brand {
     border-color: $gold;
-    color: $gold !important;
+    color: #dee2e6 !important;
     text-transform: uppercase;
     font-weight: bold;
     border-width: 1px 0px;
     border-style: solid;
     padding: 2px 0px;
     font-size: 1.25rem;
+    text-shadow: 1px 1px 2px #343a4078;
+    margin-left: 5%;
   }
   .navbar-nav {
-
+    margin-right: 10%;
     .nav-item {
       .nav-link {
         color: $gray-600;
@@ -31,24 +33,24 @@
         }
         &.active {
           color: $primary !important;
-        } 
+        }
+        i {
+          font-size: 24px;
+        }
       }
     }
-    
   }
   @include media-breakpoint-up(lg) {
     // Base styling for the navbar - screen sizes greater than the large breakpoint
     box-shadow: none;
     .navbar-brand {
-      color: fade-out($white, .3);
-      &:hover {
-        color: $white;
-      }
+      text-align: left;
     }
     .navbar-nav {
       .nav-item {
         .nav-link {
-          color: fade-out($white, .3);
+          color: $white;
+          font-weight: bold;
           padding: 0 1rem;
           &:hover {
             color: $white;
@@ -60,14 +62,13 @@
           }
         }
       }
-      .dropdown { 
-        .dropdown-item { 
-          color: fade-out($white, .3);
-         
+      .dropdown {
+        .dropdown-item {
+          color: fade-out($white, 0.3);
+
           &:hover {
             color: $white;
             background-color: inherit;
-
           }
         }
       }
