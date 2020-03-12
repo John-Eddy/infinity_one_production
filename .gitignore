@@ -1,7 +1,7 @@
 node_modules
 bower_components
 help.txt
-css
-js/*.min.js
+css/*
+js/**/*.min.js
 videos/*
 
