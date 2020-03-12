@@ -5,3 +5,4 @@ css/*
 js/**/*.min.js
 videos/*
 
+.vscode/ftp-sync.json
