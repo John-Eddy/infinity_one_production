@@ -1,14 +1,14 @@
 #contact {
-    background-color: $dark;
-    color: $white;
+    background-color: $blurgrey;
+    color: #495057a6;
   .container {
     .info {
       font-size: 20px;
     }
     form {
         input,select,textarea {
-            background-color: $dark;
-            color: $white;
+            background-color: #343a4014;
+            color: #495057a6;
         }
     }
   }
