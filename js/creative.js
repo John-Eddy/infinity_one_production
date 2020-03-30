@@ -15,6 +15,21 @@
     }
   });
 
+  //Sound button function
+  $('#sound-link').click(function () {
+    //if sound is mute
+    if ($('#home-video')[0].muted) {
+      $('#home-video')[0].muted = false; //unmute
+      //Change the logo in the navbar
+      $(this).children().removeClass('fa-volume-up');
+      $(this).children().addClass('fa-volume-mute');
+    } else {
+      $('#home-video')[0].muted = true;
+      $(this).children().removeClass('fa-volume-mute');
+      $(this).children().addClass('fa-volume-up')
+    }
+  })
+
   // Closes responsive menu when a scroll trigger link is clicked
   //$('.js-scroll-trigger').click(function() {
   //  $('.navbar-collapse').collapse('hide');
