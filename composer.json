@@ -1,0 +1,6 @@
+{
+    "require": {
+        "sabre/http": "^5.0",
+        "respect/validation": "^1.1"
+    }
+}

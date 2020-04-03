@@ -102,8 +102,15 @@
   //Form submit
   $("#contact-form").submit(function(e) {
     e.preventDefault();
-
-    console.log($(this).serialize());
+    var data = $(this).serialize();  
+    console.log(data);
+    $.post('contact.php', data)
+      .done(function (data) {
+        console.log(data)
+      })
+      .fail(function (data) {
+        console.log(data)
+      });
 
     
   
