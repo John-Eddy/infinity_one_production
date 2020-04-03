@@ -99,4 +99,14 @@
     }
   });
 
+  //Form submit
+  $("#contact-form").submit(function(e) {
+    e.preventDefault();
+
+    console.log($(this).serialize());
+
+    
+  
+})
+
 })(jQuery); // End of use strict
