@@ -52,7 +52,7 @@
             <a class="nav-link js-scroll-trigger" href="#contact"><i class="fas fa-envelope"></i></a>
           </li>
           <li class="nav-item">
-            <a id="sound-link" class="nav-link " ><i class="fas fa-volume-mute"></i></a>
+            <a id="sound-link" class="nav-link "><i class="fas fa-volume-mute"></i></a>
           </li>
         </ul>
       </div>
@@ -79,7 +79,7 @@
 
       <div class="carousel-inner h-100">
         <div class="carousel-item active h-100">
-          <video id='home-video' playsinline="playsinline" autoplay="autoplay"  loop="loop">
+          <video id='home-video' playsinline="playsinline" autoplay="autoplay" loop="loop">
             <source src="./videos/site_internet_introduction_mariage.mp4" type="video/mp4">
           </video>
           <!-- <img class="d-block w-100" src="./img/carousel/bg-masthead.jpg" alt="Second slide"> -->
@@ -315,12 +315,12 @@
   </section>
 
   <!-- Gallery Section -->
-  <section class="page-section">
+  <section class="page-section" id="gallery">
     <div class="container-fluid">
       <h2 class="text-center mt-0">Mes créations</h2>
       <div class="col-lg-8 offset-lg-2 mt-5">
 
-        <div class="gallery" id="gallery">
+        <div class="gallery mb-4" id="gallery">
 
           <!-- Grid column -->
           <div class="mb-3 pics animation all 2">
@@ -334,7 +334,6 @@
           </div>
           <!-- Grid column -->
 
-          
           <!-- Grid column -->
           <div class="mb-3 pics animation all 2">
             <img class="img-fluid" src="./img/gallery/_DSC4295.jpg" alt="Card image cap">
@@ -353,20 +352,45 @@
           </div>
           <!-- Grid column -->
 
-
           <!-- Grid column -->
           <div class="mb-3 pics animation all 1">
             <img class="img-fluid" src="./img/gallery/DSC06320.jpg" alt="Card image cap">
           </div>
           <!-- Grid column -->
-
-
-          
-
         </div>
-        <!-- Grid row -->
       </div>
     </div>
+
+    <div class="container-fluid" id="videos">
+      <div id="carouselVideo" class="carousel slide">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <iframe class="video" src="https://player.vimeo.com/video/375514134?embedparameter=value"
+              frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <div class="carousel-item ">
+            <iframe class="video" src="https://player.vimeo.com/video/348514895?embedparameter=value" frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="carousel-item">
+            <iframe class="video" src="https://player.vimeo.com/video/342584565?embedparameter=value" frameborder="0"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> 
+      <div class="row">
+        <a class="carouselButton" data-dir="prev">Vidéo précedente</a>
+        <a class="carouselButton" data-dir="next">Vidéo suivante</a>
+
+      </div>
+   
+    </div>
+
+
+
   </section>
 
 
@@ -467,8 +491,8 @@
   <script src="js/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/creative.min.js"></script>
   <script src="js/vendor/bootstrap-validator/validator.min.js"></script>
+  <script src="js/creative.min.js"></script>
 
 </body>
 

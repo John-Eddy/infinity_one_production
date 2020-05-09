@@ -83,6 +83,19 @@
     }
   });
 
+  //carousel initialisation
+  $('#carouselVideo').carousel({
+    interval: false,
+  });
+
+  //handle click on carousel next and prev button
+  jQuery(document).ready(function ($) {
+    $(".carouselButton").on("click", function (e){
+      $('#carouselVideo').carousel($(this).data('dir'));
+    });
+   
+  });
+
   // Magnific popup calls
   $('#portfolio').magnificPopup({
     delegate: 'a',
@@ -100,9 +113,9 @@
   });
 
   //Form submit
-  $("#contact-form").submit(function(e) {
+  $("#contact-form").submit(function (e) {
     e.preventDefault();
-    var data = $(this).serialize();  
+    var data = $(this).serialize();
     console.log(data);
     $.post('contact.php', data)
       .done(function (data) {
@@ -111,9 +124,16 @@
       .fail(function (data) {
         console.log(data)
       });
+  })
 
-    
-  
-})
+
+
 
 })(jQuery); // End of use strict
+
+
+(function ($) {
+
+  
+
+})(jQuery);
