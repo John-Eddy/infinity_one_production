@@ -362,12 +362,12 @@
     </div>
 
     <div class="container-fluid" id="videos">
-      <div id="carouselVideo" class="carousel slide">
+      <div id="carouselVideo" class="carousel slide mb-4">
 
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <iframe class="video" src="https://player.vimeo.com/video/375514134?embedparameter=value"
-              frameborder="0" allowfullscreen></iframe>
+            <iframe class="video" src="https://player.vimeo.com/video/375514134?embedparameter=value" frameborder="0"
+              allowfullscreen></iframe>
           </div>
 
           <div class="carousel-item ">
@@ -380,17 +380,15 @@
               allowfullscreen></iframe>
           </div>
         </div>
-      </div> 
-      <div class="row">
-        <a class="carouselButton" data-dir="prev">Vidéo précedente</a>
-        <a class="carouselButton" data-dir="next">Vidéo suivante</a>
-
       </div>
-   
+      <!-- Video controls -->
+      <div class="text-center">
+        <a class="btn-bordered carouselButton  js-scroll-trigger" href="#carouselVideo" data-dir="prev"><i
+            class="fas fa-arrow-left"></i>Vidéo précedente</a>
+        <a class="btn-bordered carouselButton  js-scroll-trigger" href="#carouselVideo" data-dir="next">Vidéo suivante
+          <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
-
-
-
   </section>
 
 
@@ -419,7 +417,6 @@
 
         <div class="col-lg-5 justify-content-center">
           <form id="contact-form" role="form">
-
             <div class="messages"></div>
             <div class="controls">
 
@@ -463,12 +460,13 @@
                   </div>
                 </div>
                 <div class="col-md-12">
+                  <!-- clef prod <div class="g-recaptcha" data-sitekey="6LcX0_QUAAAAALIiQAg48iYMHxtbxLly7xMpV2Zm"></div> -->
+                  <!-- clef dev <div class="g-recaptcha" data-sitekey="6LdqRPYUAAAAAEdw6XFIgCAGmc1tax6yWukytB3E"></div>-->
+                  
                   <input type="submit" class="btn-bordered light w-100" value="Envoyer le message">
                 </div>
               </div>
-
             </div>
-
           </form>
         </div>
       </div>
@@ -493,6 +491,8 @@
   <!-- Custom scripts for this template -->
   <script src="js/vendor/bootstrap-validator/validator.min.js"></script>
   <script src="js/creative.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdqRPYUAAAAAEdw6XFIgCAGmc1tax6yWukytB3E" async defer></script>
+
 
 </body>
 
