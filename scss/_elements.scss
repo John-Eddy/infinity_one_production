@@ -69,6 +69,20 @@
       color: $dark !important;
     }
   }
+  &.sended {
+    background-color: darkgreen !important;
+    color: $whithe !important;
+    border-color: darkgreen !important;
+
+    &:hover {
+      background-color: darkgreen !important;
+      color: $whithe !important;
+      border-color: darkgreen !important;
+    }
+  }
+  &.error {
+    border-color: red;
+  }
 }
 input,
 textarea,

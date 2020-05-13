@@ -31,16 +31,16 @@
   })
 
   // Closes responsive menu when a scroll trigger link is clicked
-  //$('.js-scroll-trigger').click(function() {
-  //  $('.navbar-collapse').collapse('hide');
-  //});
-
+  /*   $('.js-scroll-trigger').click(function() {
+      $('.navbar-collapse').collapse('hide');
+    });
+   */
   // Activate scrollspy to add active class to navbar items on scroll
-  // $('body').scrollspy({
-  //   target: '#mainNav',
-  //   offset: 75
-  // });
-
+  /*  $('body').scrollspy({
+   target: '#mainNav',
+   offset: 75
+ });
+  */
 
   // Collapse now if page is not at top
   //  navbarCollapse();
@@ -90,10 +90,10 @@
 
   //handle click on carousel next and prev button
   jQuery(document).ready(function ($) {
-    $(".carouselButton").on("click", function (e){
+    $(".carouselButton").on("click", function (e) {
       $('#carouselVideo').carousel($(this).data('dir'));
     });
-   
+
   });
 
   // Magnific popup calls
@@ -112,28 +112,60 @@
     }
   });
 
+
+  
+  function startProcessing () {
+    $('#form-submit').prop("disabled",true);
+    $('#form-spiner').removeClass('invisible');
+  }
+  
+  function stopProcessing(statusCode) {
+    $('#form-submit').prop("disabled",false);
+    $('#form-spiner').addClass('invisible');
+    $('#form-submit').addClass('error');
+   
+    removeErrors();
+    $('#submit-container').append("<p id='formMsg' class='error-msg'>Une erreur est survenue durant l'envois de votre message" + (statusCode ? "(" + statusCode + ")" : "") + "</p>");
+
+  }
+  function finishProcessing () {
+    removeErrors();
+    $('#form-submit').addClass('sended');
+    $("#form-submit").html('Message envoyé <i class="fas fa-check"></i>')
+  }
+  function removeErrors() {
+    if (typeof $('#formMsg') != 'undefined') {
+      $('#formMsg').remove();
+    }
+  }
+
   //Form submit
   $("#contact-form").submit(function (e) {
+    startProcessing();
     e.preventDefault();
     var data = $(this).serialize();
-    console.log(data);
-    $.post('contact.php', data)
-      .done(function (data) {
-        console.log(data)
+
+    var RecaptachaSiteKey = '6LdqRPYUAAAAAEdw6XFIgCAGmc1tax6yWukytB3E';//Dev
+    //var RecaptachaSiteKey = '6LcX0_QUAAAAALIiQAg48iYMHxtbxLly7xMpV2Zm'; //Prod
+
+    grecaptcha.execute(RecaptachaSiteKey, { action: 'contact' })
+      .then(function (token) {
+        data += '&recaptcha_response=' + token;
+        $.post('contact.php', data)
+          .done(function (response) {
+            finishProcessing();
+          }) 
+          .fail(function (response) {
+            stopProcessing(response.status);
+          });
       })
-      .fail(function (data) {
-        console.log(data)
-      });
   })
-
-
-
 
 })(jQuery); // End of use strict
 
 
 (function ($) {
 
-  
+
 
 })(jQuery);
