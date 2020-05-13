@@ -1,6 +1,7 @@
 {
     "require": {
         "sabre/http": "^5.0",
-        "respect/validation": "^1.1"
+        "respect/validation": "^1.1",
+        "google/recaptcha": "^1.2"
     }
 }
