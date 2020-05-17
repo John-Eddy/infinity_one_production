@@ -65,33 +65,31 @@
     <div id="title">
       <div class="container">
         <div>
-          <h1 class="text-uppercase font-weight-bold">Infinity one production</h1>
+          <!-- <h1 class="text-uppercase font-weight-bold">Infinity one production</h1> -->
         </div>
       </div>
     </div>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide  h-100" data-ride="carousel">
-      <ol class="carousel-indicators">
+     <!--  <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
+      </ol> -->
 
       <div class="carousel-inner h-100">
         <div class="carousel-item active h-100">
-          <video id='home-video' playsinline="playsinline" autoplay="autoplay" loop="loop">
+          <video id='home-video' playsinline="playsinline" autoplay="autoplay" >
             <source src="./videos/site_internet_introduction_mariage.mp4" type="video/mp4">
           </video>
           <!-- <img class="d-block w-100" src="./img/carousel/bg-masthead.jpg" alt="Second slide"> -->
-
-
         </div>
-        <div class="carousel-item h-100">
+        <!-- <div class="carousel-item h-100">
           <img class="d-block w-100" src="./img/carousel/paris.jpg" alt="Second slide">
         </div>
         <div class="carousel-item h-100">
           <img class="d-block w-100" src="./img/carousel/bride-clouds-daylight-dress-949224.jpg" alt="Second slide">
-        </div>
+        </div> -->
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -336,7 +334,7 @@
 
           <!-- Grid column -->
           <div class="mb-3 pics animation all 2">
-            <img class="img-fluid" src="./img/gallery/_DSC4295.jpg" alt="Card image cap">
+            <img class="img-fluid" src="./img/gallery/_DSC3487.jpg" alt="Card image cap">
           </div>
           <!-- Grid column -->
 
@@ -348,13 +346,13 @@
 
           <!-- Grid column -->
           <div class="mb-3 pics animation all 1">
-            <img class="img-fluid" src="./img/gallery/_DSC4196.jpg" alt="Card image cap">
+            <img class="img-fluid" src="./img/gallery/_DSC4663.jpg" alt="Card image cap">
           </div>
           <!-- Grid column -->
 
           <!-- Grid column -->
           <div class="mb-3 pics animation all 1">
-            <img class="img-fluid" src="./img/gallery/DSC06320.jpg" alt="Card image cap">
+            <img class="img-fluid" src="./img/gallery/_DSC4933.jpg" alt="Card image cap">
           </div>
           <!-- Grid column -->
         </div>
@@ -379,6 +377,10 @@
             <iframe class="video" src="https://player.vimeo.com/video/342584565?embedparameter=value" frameborder="0"
               allowfullscreen></iframe>
           </div>
+          <div class="carousel-item">
+            <iframe class="video" src="https://player.vimeo.com/video/339921663?embedparameter=value" frameborder="0"
+              allowfullscreen></iframe>
+          </div>
         </div>
       </div>
       <!-- Video controls -->
@@ -400,12 +402,13 @@
 
       <div class="row mt-5">
         <div class="col-lg-5 justify-content-center">
-          <div class="info ml-auto text-center mb-5 mb-lg-0">
-            <p>Infinity One Production</p>
-            <p>302 avennue berthelot</p>
-            <p>69008 Lyon</p>
-            <div><i class="fas fa-phone mb-3 "></i> 07 69 57 50 58 <p class="text-muted">Du lundi au samedi de 8h00 à
-                21h00</p>
+          <div class="info ml-auto  mb-5 mb-lg-0">
+            <p class="mb-2">Infinity One Production</p>
+            <p class="mb-1"><i class="fas fa-map-marker-alt"></i> 4 Rue Hassan Fathy</p>
+            <p class="mb-2">38090 Villefontaine</p>
+            <div>
+              <i class="fas fa-phone mb-1 "></i> 07 69 57 50 58 
+              <p class="text-muted">Du lundi au samedi de 8h00 à 21h00</p>
             </div>
           </div>
           <!--<div class="col-lg-4 mr-auto text-center">
@@ -454,12 +457,13 @@
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <textarea id="form_message" name="message" class="form-control" placeholder="Votre message" rows="4"
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Votre message" rows="4" minlength="30"
                       required="required" data-error="Merci d'entrer un message."></textarea>
                     <div class="help-block with-errors"></div>
                   </div>
                 </div>
                 <div id="submit-container" class="col-md-12">
+                  
                   <button  type="submit" id='form-submit' class="btn-bordered light w-100" >Envoyer le message <span id="form-spiner" class="lds-dual-ring invisible"></span></button>
                 </div>
               </div>
@@ -478,6 +482,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
+  <script src="https://www.google.com/recaptcha/api.js?render=6LcNuvYUAAAAAA7hFE4nV3JpDfaWpTUwtCectBBH" async defer></script>
   <script src="js/vendor/jquery/jquery.min.js"></script>
   <script src="js/vendor/bootstrap/bootstrap.bundle.min.js"></script>
 
@@ -488,7 +493,6 @@
   <!-- Custom scripts for this template -->
   <script src="js/vendor/bootstrap-validator/validator.min.js"></script>
   <script src="js/creative.min.js"></script>
-  <script src="https://www.google.com/recaptcha/api.js?render=6LdqRPYUAAAAAEdw6XFIgCAGmc1tax6yWukytB3E" async defer></script>
 
 
 </body>

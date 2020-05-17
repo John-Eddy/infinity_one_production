@@ -145,8 +145,8 @@
     e.preventDefault();
     var data = $(this).serialize();
 
-    var RecaptachaSiteKey = '6LdqRPYUAAAAAEdw6XFIgCAGmc1tax6yWukytB3E';//Dev
-    //var RecaptachaSiteKey = '6LcX0_QUAAAAALIiQAg48iYMHxtbxLly7xMpV2Zm'; //Prod
+    //var RecaptachaSiteKey = '6LdqRPYUAAAAAEdw6XFIgCAGmc1tax6yWukytB3E';//Dev
+    var RecaptachaSiteKey = '6LcNuvYUAAAAAA7hFE4nV3JpDfaWpTUwtCectBBH'; //Prod
 
     grecaptcha.execute(RecaptachaSiteKey, { action: 'contact' })
       .then(function (token) {
