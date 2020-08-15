@@ -88,11 +88,23 @@
     interval: false,
   });
 
+  $('#carousel-gallery').carousel({
+    interval: false,
+  });
+
+
   //handle click on carousel next and prev button
   jQuery(document).ready(function ($) {
-    $(".carouselButton").on("click", function (e) {
+
+    $(".carouselVideoButton").on("click", function (e) {
       $('#carouselVideo').carousel($(this).data('dir'));
     });
+
+    $(".carousel-gallery-button").on("click", function (e) {
+      $('#carousel-gallery').carousel($(this).data('dir'));
+    });
+
+
 
   });
 

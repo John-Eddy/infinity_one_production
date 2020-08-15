@@ -45,27 +45,25 @@
     color: $white;
   }
   &:focus {
-      outline: none;
-
+    outline: none;
   }
   &.inverted {
     color: $white;
     border-color: $white;
     &:hover {
-        background-color: rgba($primary, 0.7);
-        text-shadow: none;
-      }
+      background-color: rgba($primary, 0.7);
+      text-shadow: none;
+    }
   }
   &.gold {
     color: $gold;
     border-color: $gold;
-
   }
   &.light {
     border-color: $white;
     color: $white;
     &:hover {
-      background-color:$white !important;
+      background-color: $white !important;
       color: $dark !important;
     }
   }
