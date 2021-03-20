@@ -1,7 +1,6 @@
 node_modules
 bower_components
 help.txt
-css
 js/vendor
 videos/*
 vendor
