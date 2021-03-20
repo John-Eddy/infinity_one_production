@@ -6,7 +6,26 @@
   position: fixed;
   height: $navbar-height;
 
+  .navbar {
+    &-toggler {
+      &-icon {
+        background: none;
+        color: #dee2e6;
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 2px #000000;
+      }
+    }
+    &-collapse {
+      position: absolute;
+      left: 0;
+      top: $navbar-height;
+      width: 100vw;
+      background-color: #212121cc;
+      padding: 0 1.5rem ;
+    }
+  }
   .navbar-brand {
+    display: none;
     border-color: $gold;
     color: #dee2e6 !important;
     text-transform: uppercase;
@@ -22,17 +41,17 @@
     margin-right: 10%;
     .nav-item {
       .nav-link {
-        color: $gray-600;
+        color: $white;
         font-family: $font-family-sans-serif;
         font-weight: $font-weight-bold;
         font-size: 0.9rem;
         padding: 0.75rem 0;
         &:hover,
         &:active {
-          color: $primary;
+          color: $white;
         }
         &.active {
-          color: $primary !important;
+          color: $white !important;
         }
         i {
           font-size: 24px;
@@ -40,17 +59,26 @@
       }
     }
   }
-  @include media-breakpoint-up(lg) {
+ @media (min-width: $md) {
     // Base styling for the navbar - screen sizes greater than the large breakpoint
     box-shadow: none;
     .navbar-brand {
       text-align: left;
     }
+    .navbar {
+      &-collapse {
+        position: relative;
+        width: auto;
+        top: auto;
+        left: auto;
+        background-color: transparent;
+      }
+    }
     .navbar-nav {
       .nav-item {
         .nav-link {
           color: $white;
-          font-weight: bold;
+          font-size: 1rem;
           padding: 0 1rem;
           &:hover {
             color: $white;
