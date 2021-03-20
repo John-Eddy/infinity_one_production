@@ -103,9 +103,6 @@
     $(".carousel-gallery-button").on("click", function (e) {
       $('#carousel-gallery').carousel($(this).data('dir'));
     });
-
-
-
   });
 
   // Magnific popup calls
@@ -123,8 +120,6 @@
       tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
     }
   });
-
-
   
   function startProcessing () {
     $('#form-submit').prop("disabled",true);
@@ -174,10 +169,3 @@
   })
 
 })(jQuery); // End of use strict
-
-
-(function ($) {
-
-
-
-})(jQuery);

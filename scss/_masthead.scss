@@ -1,10 +1,11 @@
 // Styling for the masthead
 header.masthead {
-  //padding-top: 10rem;
+  width: 100%;
   margin-top: 0px;
   padding-bottom: calc(10rem - #{$navbar-height});
   // replace the masthead.jpg image in the /img directory to change the image
   // if the image name change, make sure to update the url path below!
+  background: no-repeat url("./../img/background/masterhead-background.jpg") ;
   #title {
     margin-top: $navbar-height;
     position: absolute;
@@ -27,27 +28,11 @@ header.masthead {
         margin-bottom: 50px;
         font-size: 3.5rem;
         text-shadow: 1px 1px 2px #343a4078;
+        background-color: #21212152;
 
       }
     }
   }
-  .carousel {
-    .carousel-inner {
-      .carousel-item {
-        img,
-        video {
-          position: absolute;
-          width: 100%;
-        }
-        /* background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: scroll;
-      background-size: cover;
-      background: linear-gradient(to bottom, #{fade-out($brown, .2)} 0%,#{fade-out($brown, .2)} 100%), url('../img/bg-masthead.jpg'); */
-      }
-    }
-  }
-
  
   @include media-breakpoint-up(lg) {
     height: 100vh;
